@@ -87,6 +87,34 @@ def SplitStrByChar(Str, Char, Include):
       currentStr += i
   Arr.append(currentStr)
   return Arr
+def ReplaceAllOccurrencesOfChar(Str, From, To):
+  newString = ""
+  for i in Str:
+    if i == From:
+      newString += To
+    else:
+      newString += i
+  return newString
+def ReplaceFirstOccurrencesOfChar(Str, From, To):
+  newString = ""
+  Found = False
+  for i in Str:
+    if i == From and Found == False:
+      Found = True
+      newString += To
+    else:
+      newString += i
+  return newString
+def ReplaceFinalOccurrencesOfChar(Str, From, To):
+  newString = ""
+  Found = False
+  for i in Str[::-1]:
+    if i == Char and Found == False:
+      Found = True
+      newString += To
+    else:
+      newString += i
+  return newString[::-1]
 def EncodeStrToNumbers(Str):
   Chars = """abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWZXY0123456789 !"#¤%&/()=?`@£$€{[]}\^~¨'*-_,.<>|§½"""
   Count = 1
