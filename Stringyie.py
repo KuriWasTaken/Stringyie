@@ -1,5 +1,5 @@
 def AdvancedStringError(Str):
-  print("\033[31m"+"AdnacedString Error: "+Str+"\033[0m")
+  print("\033[31m"+"Stringyie Error: "+Str+"\033[0m")
   exit(1)
 
 def SplitFromTo(Str, From, To, Include):
