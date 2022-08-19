@@ -132,7 +132,7 @@ def ReplaceFinalOccurrencesOfChar(Str, From, To):
     newString = ""
     Found = False
     for i in Str[::-1]:
-        if i == Char and Found == False:
+        if i == From and Found == False:
             Found = True
             newString += To
         else:
